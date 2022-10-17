@@ -1,25 +1,7 @@
 %%
 %% This is file `acmart.cls',
 %% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% acmart.dtx  (with options: `class')
-%% 
-%% IMPORTANT NOTICE:
-%% 
-%% For the copyright see the source file.
-%% 
-%% Any modified versions of this file must be renamed
-%% with new filenames distinct from acmart.cls.
-%% 
-%% For distribution of the original source see the terms
-%% for copying and modification in the file acmart.dtx.
-%% 
-%% This generated file may be distributed as long as the
-%% original source files, as listed above, are part of the
-%% same distribution. (The sources need not necessarily be
-%% in the same archive or directory.)
+
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z

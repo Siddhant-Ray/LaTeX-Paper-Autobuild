@@ -2,51 +2,51 @@ compile_pdf:
   stage: build
   image: texlive/texlive  # use a Docker image for LaTeX from https://hub.docker.com/
   tags:
-    - UPCnet
+    - ci-runner
   script: 
         - make clean
         - make pdf
   artifacts:
     paths: 
-      - ./outputs/survey.pdf  # instruct GitLab to keep the survey.pdf file
+      - ./outputs/main.pdf  # instruct GitLab to keep the main.pdf file
     expire_in: 1 year
 
 compile_greyscale:
   stage: build
   image: texlive/texlive  # use a Docker image for LaTeX from https://hub.docker.com/
   tags:
-    - UPCnet
+    - ci-runner
   script: 
         - make clean
         - make greyscale
   artifacts:
     paths: 
-      - ./outputs/survey_grey.pdf  # instruct GitLab to keep the survey.pdf file
+      - ./outputs/main_grey.pdf  # instruct GitLab to keep the main_grey.pdf file
     expire_in: 1 year
 
 compile_noappendix:
   stage: build
   image: texlive/texlive  # use a Docker image for LaTeX from https://hub.docker.com/
   tags:
-    - UPCnet
+    - ci-runner
   script: 
         - make clean
         - make no-appendix
   artifacts:
     paths: 
-      - ./outputs/survey_no-appendix.pdf  # instruct GitLab to keep the survey.pdf file
+      - ./outputs/main_no-appendix.pdf  # instruct GitLab to keep the main_no-appendix.pdf file
     expire_in: 1 year
 
 compile_noacknowledgements:
   stage: build
   image: texlive/texlive  # use a Docker image for LaTeX from https://hub.docker.com/
   tags:
-    - UPCnet
+    - ci-runner
   script: 
         - make clean
         - make no-acknowledgements
   artifacts:
     paths: 
-      - ./outputs/survey_no-acknowledgements.pdf  # instruct GitLab to keep the survey.pdf file
+      - ./outputs/main_no-acknowledgements.pdf  # instruct GitLab to keep the main_no-acknowledgements.pdf file
     expire_in: 1 year
 
