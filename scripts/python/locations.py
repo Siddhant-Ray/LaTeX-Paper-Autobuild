@@ -1,4 +1,4 @@
-import os 
+import os
 import sys
 
 # Path: scripts/locations.py
@@ -7,5 +7,5 @@ import sys
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Abstract
-abstract_file = os.path.join(script_dir, '../sections/abstract.tex')
-target_abstract_file = os.path.join(script_dir, '../outputs/abstract.txt')
+abstract_file = os.path.join(script_dir, '../../sections/abstract.tex')
+target_abstract_file = os.path.join(script_dir, '../../outputs/abstract.txt')

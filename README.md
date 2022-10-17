@@ -11,7 +11,7 @@ Advanced builds:
 * Greyscale pdf : [main_grey.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main_grey.pdf)
 * No appendix : [main_no-appendix.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main_no-appendix.pdf)
 * No acknowledgements : [main_no-acknowledgements.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main_no-acknowledgements.pdf)
-* Abstract only: [abstract](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/abstract.txt), generated using [abstract.py](scripts/abstract.py)
+* Abstract only: [abstract](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/abstract.txt), generated using [abstract.py](scripts/python/abstract.py)
 
 ## How to use:
 
@@ -24,6 +24,10 @@ Once setup, the built PDFs will be stored as artifacts on the successful complet
 ### GitHub
 
 Well if GitLab is not an option, you can make it work with GitHub too. The file [.build-paper.yml](.github/workflows/build-paper.yml) automatically builds every version of the paper on push to master. The caveat here is that GitHub doesn't let you store artifacts with an expiry date. Hence, here we package every built PDF as part of a new release, and the release PDFs are linked in the ReadMe to download.
+
+## Docker support:
+
+Sometimes you may prefer to run everything a packaged Docker container, as you might not want to experiment with the TeX environments on your system (or maybe you just prefer containers, or use Windows). It is possible to run every ```make``` command inside a Docker container provided here. We build a TeX image inside a container using the [Dockerfile](Dockerfile), after which all builds will run inside the container, and the outputs will be copied to the required folder.
 
 ## Comments:
 

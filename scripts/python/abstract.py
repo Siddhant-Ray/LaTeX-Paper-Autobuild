@@ -1,6 +1,6 @@
+import os
 import re
 import sys
-import os
 
 from locations import abstract_file, target_abstract_file
 
