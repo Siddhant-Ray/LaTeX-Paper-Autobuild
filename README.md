@@ -11,7 +11,7 @@ Advanced builds:
 * Greyscale pdf : [main_grey.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main_grey.pdf)
 * No appendix : [main_no-appendix.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main_no-appendix.pdf)
 * No acknowledgements : [main_no-acknowledgements.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main_no-acknowledgements.pdf)
-* Abstract only: 
+* Abstract only: [abstract](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/abstract.txt), generated using [abstract.py](scripts/abstract.py)
 
 ## How to use:
 
