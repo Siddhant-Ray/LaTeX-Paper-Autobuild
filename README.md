@@ -30,7 +30,7 @@ This template relies a bit too much on the ACM templates as a base. I would argu
 
 If you do include new packages in the preamble (you will at some point), you may run into package clashes with the ACM class. With a little bit of investigation, I am sure they can be fixed.
 
-I have also included [ACM-Reference-Format](ACM-Reference-Format.bst) and the [acmart](acmart.cls) class files as a reference in case you want to play around with them (I do not own these files, all are &copy; ACM).
+I have also included [ACM-Reference-Format](lib/ACM-Reference-Format.bst) and the [acmart](lib/acmart.cls) class files as a reference in case you want to play around with them (I do not own these files, all are &copy; ACM).
 
 New features will be added to this template from time to time, when I can think of them. If you want to contribute, feel free to create a PR. Improvements and suggestions are welcome.
 
