@@ -2,9 +2,7 @@
 
 I always struggled to find a good solution to automate builds and track versions while writing a paper in LaTeX. Well, I decided to write a tool myself. Overleaf is one nice solution where you don't have to worry about anything, till it goes down for maintenance at the very time you need to make a crucial update (jk we all love Overleaf don't we). Compiling locally is always nice, auto-building and version tracking for it is even better. Plus I thought I could support some custom builds too.
 
-TeX files and compiling scripts.
-
-Default builds:
+Default build:
 
 * Latest compiled pdf : [main.pdf](https://github.com/Siddhant-Ray/LaTeX-Paper-Autobuild/releases/download/release/main.pdf)
 
@@ -18,9 +16,9 @@ Advanced builds:
 
 ### GitLab
 
-Tbh, using this build system works much better with GitLab CI, as GitLab's integrated CI/CD supports building, storing artifacts etc. To run as part of a GitLab repository, this repository can be mirrored into a GitLab repository, and the file [.gitlab-ci.yml](.gitlab-ci.yml) can be used for autobuilding. All PDFs are built on every push. The caveat is that GitLab doesn't come with an in-built autoconfigured runner, so you will have to create a runner and replace the ```ci-runner``` with your own runner tag in [.gitlab-ci.yml](.gitlab-ci.yml). More inforamtion about setting up runners can be found here: [gitlab-ci-runners](https://docs.gitlab.com/runner/register/)
+Tbh, using this build system works much better with GitLab CI, as GitLab's integrated CI/CD supports building, storing artifacts etc. To run as part of a GitLab repository, this repository can be mirrored into a GitLab repository, and the file [.gitlab-ci.yml](.gitlab-ci.yml) can be used for autobuilding. All PDFs are built on every push. The caveat is that GitLab doesn't come with an in-built autoconfigured runner, so you will have to create a runner and replace the ```ci-runner``` with your own runner tag in [.gitlab-ci.yml](.gitlab-ci.yml). More inforamtion about setting up runners can be found here: [gitlab-ci-runners](https://docs.gitlab.com/runner/register/).
 
-Once setup, the built PDFs will be stored as artifacts on the successful completion of every job, and they can be linked to the ReadMe (or whatever you want to do with them)
+Once setup, the built PDFs will be stored as artifacts on the successful completion of every job, and they can be linked to the ReadMe (or whatever you want to do with them).
 
 ### GitHub
 
