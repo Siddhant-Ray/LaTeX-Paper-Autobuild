@@ -5,6 +5,9 @@
 
 FILE := main
 OUTPUR_DIR := outputs
+SCRIPTDIR := scripts
+SECTIONSDIR := sections
+
 NO_APPENDIX_CONFIG := headers/config/noappendix.config
 NO_ACKNOWLEDGEMENTS_CONFIG := headers/config/noacknowledgements.config
 
@@ -59,6 +62,11 @@ all:
 	make greyscale
 	make no-appendix
 	make no-acknowledgements
+
+.PHONY: abstract
+abstract:
+	python3 $(SCRIPTDIR)/abstract.py 
+	rm -rf $(SCRIPTDIR)/__pycache__
 	
 .PHONY: clean
 clean:

@@ -14,7 +14,9 @@ jobs:
         with:
           run: |
             apk add make
+            apk add --no-cache python3 py3-pip
             make all 
+            make abstract
       - name: Delete placeholder release
         uses: actions/github-script@v6
         continue-on-error: true # in case there's no existing release
@@ -41,5 +43,7 @@ jobs:
             outputs/main_grey.pdf
             outputs/main_no-appendix.pdf
             outputs/main_no-acknowledgements.pdf
+            outputs/abstract.txt
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

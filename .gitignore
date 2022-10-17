@@ -277,3 +277,6 @@ TSWLatexianTemp*
 
 # Mac stuff
 .DS_Store
+
+# Pycache
+__pycache__/

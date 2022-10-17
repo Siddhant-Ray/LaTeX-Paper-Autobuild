@@ -50,3 +50,17 @@ compile_noacknowledgements:
       - ./outputs/main_no-acknowledgements.pdf  # instruct GitLab to keep the main_no-acknowledgements.pdf file
     expire_in: 1 year
 
+make_abstract:
+  stage: build
+  image: texlive/texlive  # use a Docker image for LaTeX from https://hub.docker.com/
+  tags:
+    - ci-runner
+  script: 
+        - make clean
+        - make abstract
+  artifacts:
+    paths: 
+      - ./outputs/abstract.txt  # instruct GitLab to keep the main_no-acknowledgements.pdf file
+    expire_in: 1 year
+
+
