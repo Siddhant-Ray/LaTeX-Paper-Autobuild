@@ -154,9 +154,11 @@ clean-container:
 # Make all pdfs
 .PHONY: docker-all
 docker-all: clean-container
-	$(RUN) make all
-	$(DOCKER-CMD) cp $(CONTAINER):/paper/outputs/*.pdf outputs/
-	$(DOCKER-CMD) cp $(CONTAINER):/paper/outputs/*.log outputs/
+	$(RUN) make pdf greyscale no-appendix no-acknowledgements
+	$(DOCKER-CMD) cp $(CONTAINER):/paper/outputs/main.pdf outputs/
+	$(DOCKER-CMD) cp $(CONTAINER):/paper/outputs/main_grey.pdf outputs/
+	$(DOCKER-CMD) cp $(CONTAINER):/paper/outputs/main_no-appendix.pdf outputs/
+	$(DOCKER-CMD) cp $(CONTAINER):/paper/outputs/main_no-acknowledgements.pdf outputs/
 
 # Make normal pdf
 .PHONY: docker-pdf
