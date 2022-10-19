@@ -39,7 +39,6 @@ mv $ROOTFILE.pdf $OUTPUT_DIR/$ROOTFILE.pdf
 
 # Clean current directory
 echo "Cleaning aux files in $(pwd)"
-
 rm *.aux *.bbl *.blg *.log *.out
 
 

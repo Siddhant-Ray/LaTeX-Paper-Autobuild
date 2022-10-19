@@ -108,6 +108,8 @@ clean-configs:
 .PHONY: clean-all
 clean-all: clean clean-configs
 	rm -f $(OUTPUR_DIR)/*.pdf
+	rm -f $(OUTPUR_DIR)/*.log
+	rm -f $(OUTPUR_DIR)/*txt
 	
 ##########
 # DOCKER #

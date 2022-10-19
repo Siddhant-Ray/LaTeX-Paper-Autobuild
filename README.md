@@ -46,6 +46,10 @@ Sometimes you may prefer to run everything in a packaged `Docker` container, as 
 
     $ make <docker-target>
 
+Note: Before running any docker-target, make sure to pull the latest TeX image with:
+
+    $ make docker-run
+
 ## Comments:
 
 This template relies a bit too much on the ACM templates as a base. I would argue that is not an issue in academia in general, as ACM is a good standard to follow. Plus you can always change the document template inside [main.tex](main.tex).
