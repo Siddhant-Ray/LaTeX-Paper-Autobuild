@@ -25,15 +25,22 @@ if [ -f "$OUTPUT_DIR/$ROOTFILE.pdf" ]; then
     rm $OUTPUT_DIR/$ROOTFILE.pdf
 fi
 
-pdflatex -output-directory=$OUTPUT_DIR $ROOTFILE
-bibtex $ROOTFILE
-pdflatex -output-directory=$OUTPUT_DIR $ROOTFILE
-pdflatex -output-directory=$OUTPUT_DIR $ROOTFILE
+# Clean first 
+rm sections/*.aux
+rm *.aux
 
-# Clean all aux files in the output directory
-echo "Cleaning aux files in $OUTPUT_DIR"
-rm $OUTPUT_DIR/*.aux $OUTPUT_DIR/*.bbl $OUTPUT_DIR/*.blg $OUTPUT_DIR/*.log $OUTPUT_DIR/*.out $OUTPUT_DIR/*.toc
-rm $OUTPUT_DIR/*.fls $OUTPUT_DIR/*.fdb_latexmk
+pdflatex $ROOTFILE
+bibtex $ROOTFILE
+pdflatex $ROOTFILE
+pdflatex $ROOTFILE
+
+# Copy to output directory
+mv $ROOTFILE.pdf $OUTPUT_DIR/$ROOTFILE.pdf
+
+# Clean current directory
+echo "Cleaning aux files in $(pwd)"
+
+rm *.aux *.bbl *.blg *.log *.out
 
 
 
