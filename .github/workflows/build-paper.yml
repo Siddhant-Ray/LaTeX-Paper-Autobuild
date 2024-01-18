@@ -1,4 +1,5 @@
 name: Build LaTeX paper
+permissions: write-all 
 on: 
   push:
     branches:
